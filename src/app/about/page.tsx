@@ -23,13 +23,25 @@ export default function AboutPage() {
 
             <h3 className={styles.contactTitle}>Contact</h3>
             <div className={styles.socialLinks}>
-              <Link href="https://github.com/dsuke" className={styles.socialLink}>
+              <Link
+                href="https://github.com/D-suke0614"
+                target="_blank"
+                className={styles.socialLink}
+              >
                 <LuGithub className={styles.socialIcon} />
               </Link>
-              <Link href="https://twitter.com/dsuke" className={styles.socialLink}>
+              <Link
+                href="https://twitter.com/dsuke"
+                target="_blank"
+                className={styles.socialLink}
+              >
                 <FaXTwitter className={styles.socialIcon} />
               </Link>
-              <Link href="https://linkedin.com/in/dsuke" className={styles.socialLink}>
+              <Link
+                href="https://www.linkedin.com/in/daisuke-kida/"
+                target="_blank"
+                className={styles.socialLink}
+              >
                 <LuLinkedin className={styles.socialIcon} />
               </Link>
               <Link href="mailto:d.suke.kida@gmail.com" className={styles.socialLink}>

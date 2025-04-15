@@ -48,6 +48,7 @@ export default function Header() {
               <Link
                 href="https://github.com/D-suke0614"
                 aria-label="GitHub profile"
+                target="_blank"
                 className={styles.githubLink}
               >
                 <LuGithub className={styles.githubIcon} />
