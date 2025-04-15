@@ -5,32 +5,31 @@ import styles from './page.module.css';
 // Mock work data
 // todo: コンテンツ内容の整備
 const works = [
-  {
-    id: '1',
-    title: 'E-commerce Platform',
-    description:
-      'A modern e-commerce solution with cart, checkout, and payment integration.',
-    technologies: ['Next.js', 'React', 'TypeScript', 'Stripe', 'CSS Modules'],
-    imageUrl: '/placeholder.svg?height=300&width=500&text=E-commerce+Platform',
-    link: '#',
-  },
+  // {
+  //   id: '1',
+  //   title: 'E-commerce Platform',
+  //   description:
+  //     'A modern e-commerce solution with cart, checkout, and payment integration.',
+  //   technologies: ['Next.js', 'React', 'TypeScript', 'Stripe', 'CSS Modules'],
+  //   imageUrl: '/placeholder.svg?height=300&width=500&text=E-commerce+Platform',
+  //   link: '#',
+  // },
   {
     id: '2',
-    title: 'Analytics Dashboard',
+    title: 'CRM',
     description:
-      'Interactive dashboard with real-time data visualization for business metrics.',
-    technologies: ['React', 'D3.js', 'TypeScript', 'WebSockets', 'Material UI'],
-    imageUrl: '/placeholder.svg?height=300&width=500&text=Analytics+Dashboard',
-    link: '#',
+      'CRMの新規開発において、フロントエンド開発と自動テストの実行基盤作りを行いました。',
+    technologies: ['Vue', 'GitHub Actions', 'Java', 'PostgreSQL'],
+    imageUrl: '/no_image.png',
+    link: 'https://www.e-sales.jp/',
   },
   {
     id: '3',
-    title: 'Portfolio Website',
-    description:
-      'Custom portfolio website with blog, showcasing frontend development skills.',
-    technologies: ['Next.js', 'CSS Modules', 'Framer Motion', 'MDX'],
-    imageUrl: '/placeholder.svg?height=300&width=500&text=Portfolio+Website',
-    link: '#',
+    title: '占いマッチングプラットフォーム RAYSEE メディアサイト',
+    description: '占いマッチングプラットフォームのメディアサイトの構築を行いました。',
+    technologies: ['WordPress', 'GitHub Actions'],
+    imageUrl: '/raysee.png',
+    link: 'https://raysee.jp/column',
   },
 ];
 
@@ -63,7 +62,12 @@ export default function WorksPage() {
                       </span>
                     ))}
                   </div>
-                  <Link href={work.link} className={styles.viewLink}>
+                  <Link
+                    href={work.link}
+                    className={styles.viewLink}
+                    rel="nofollow noreferrer"
+                    target="_blank"
+                  >
                     View Project
                   </Link>
                 </div>

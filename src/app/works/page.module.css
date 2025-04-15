@@ -89,6 +89,7 @@
 
 .viewLink {
   color: var(--color-accent);
+  width: fit-content;
   transition: text-decoration 0.2s;
 }
 

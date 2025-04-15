@@ -16,6 +16,7 @@ export default function Footer() {
           <Link
             href="https://github.com/D-suke0614"
             aria-label="GitHub profile"
+            target="_blank"
             className={styles.socialLink}
           >
             <LuGithub className={styles.socialIcon} />
@@ -23,13 +24,15 @@ export default function Footer() {
           <Link
             href="https://twitter.com/dsuke"
             aria-label="Twitter profile"
+            target="_blank"
             className={styles.socialLink}
           >
             <FaXTwitter className={styles.socialIcon} />
           </Link>
           <Link
-            href="https://linkedin.com/in/dsuke"
+            href="https://www.linkedin.com/in/daisuke-kida/"
             aria-label="LinkedIn profile"
+            target="_blank"
             className={styles.socialLink}
           >
             <LuLinkedin className={styles.socialIcon} />
