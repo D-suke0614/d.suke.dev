@@ -2,18 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 
-// Mock work data
-// todo: コンテンツ内容の整備
 const works = [
-  // {
-  //   id: '1',
-  //   title: 'E-commerce Platform',
-  //   description:
-  //     'A modern e-commerce solution with cart, checkout, and payment integration.',
-  //   technologies: ['Next.js', 'React', 'TypeScript', 'Stripe', 'CSS Modules'],
-  //   imageUrl: '/placeholder.svg?height=300&width=500&text=E-commerce+Platform',
-  //   link: '#',
-  // },
+  {
+    id: '1',
+    title: 'Personal Color',
+    description: 'パーソナルカラー診断アプリ',
+    technologies: ['Next.js', 'React', 'TypeScript', 'face-api'],
+    imageUrl: '/personal-color.png',
+    link: 'https://personal-color-tau.vercel.app/',
+  },
   {
     id: '2',
     title: 'CRM',
