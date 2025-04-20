@@ -4,9 +4,9 @@ import styles from './page.module.css';
 
 const works = [
   {
-    id: '1',
+    id: '3',
     title: 'Personal Color',
-    description: 'パーソナルカラー診断アプリ',
+    description: '手軽にパーソナルカラーを診断できるサイトを作成しました。',
     technologies: ['Next.js', 'React', 'TypeScript', 'face-api'],
     imageUrl: '/personal-color.png',
     link: 'https://personal-color-tau.vercel.app/',
@@ -21,7 +21,7 @@ const works = [
     link: 'https://www.e-sales.jp/',
   },
   {
-    id: '3',
+    id: '1',
     title: '占いマッチングプラットフォーム RAYSEE メディアサイト',
     description: '占いマッチングプラットフォームのメディアサイトの構築を行いました。',
     technologies: ['WordPress', 'GitHub Actions'],
