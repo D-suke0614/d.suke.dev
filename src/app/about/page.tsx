@@ -13,11 +13,11 @@ export default function AboutPage() {
           <div className={styles.info}>
             <h2 className={styles.name}>D.suke</h2>
             <p className={styles.description}>
-              Frontend Engineer based in Japan, passionate about creating beautiful and
+              Web Developer based in Japan, passionate about creating beautiful and
               functional web applications.
             </p>
             <p className={styles.description}>
-              I specialize in React, Next.js, and TypeScript, with a focus on building
+              I especial in React, Next.js, and TypeScript, with a focus on building
               performant and accessible user interfaces.
             </p>
 

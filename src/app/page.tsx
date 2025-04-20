@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <div className={styles.content}>
         <h1 className={styles.title}>I&apos;m D.suke</h1>
-        <p className={styles.subtitle}>Frontend Engineer</p>
+        <p className={styles.subtitle}>Web Developer</p>
         <div className={styles.navigation}>
           <Link href="/blog" className={styles.navLink}>
             Blog
