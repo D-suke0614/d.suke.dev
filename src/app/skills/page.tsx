@@ -1,7 +1,6 @@
 import { FaVuejs } from 'react-icons/fa';
 import {
   SiCss3,
-  SiCssmodules,
   SiFigma,
   SiGit,
   SiGithub,
@@ -9,15 +8,13 @@ import {
   SiJavascript,
   SiNextdotjs,
   SiReact,
+  SiSlack,
   SiTypescript,
   SiVercel,
-  SiWebpack,
 } from 'react-icons/si';
 
 import styles from './page.module.css';
 
-// Mock skills data with icons
-// todo: スキルに乗せる内容の見直し
 const skillCategories = [
   {
     title: 'Languages',
@@ -33,7 +30,6 @@ const skillCategories = [
     skills: [
       { name: 'React', icon: <SiReact className={styles.skillIcon} /> },
       { name: 'Next.js', icon: <SiNextdotjs className={styles.skillIcon} /> },
-      { name: 'CSS Modules', icon: <SiCssmodules className={styles.skillIcon} /> },
       { name: 'Vue.js', icon: <FaVuejs className={styles.skillIcon} /> },
     ],
   },
@@ -42,20 +38,9 @@ const skillCategories = [
     skills: [
       { name: 'Git', icon: <SiGit className={styles.skillIcon} /> },
       { name: 'GitHub', icon: <SiGithub className={styles.skillIcon} /> },
-      { name: 'Webpack', icon: <SiWebpack className={styles.skillIcon} /> },
       { name: 'Vercel', icon: <SiVercel className={styles.skillIcon} /> },
-    ],
-  },
-  {
-    title: 'Design & UX',
-    skills: [
       { name: 'Figma', icon: <SiFigma className={styles.skillIcon} /> },
-      // {
-      //   name: 'Responsive Design',
-      //   icon: <ResponsiveIcon className={styles.skillIcon} />,
-      // },
-      // { name: 'UI/UX Principles', icon: <MousePointer className={styles.skillIcon} /> },
-      // { name: 'Accessibility', icon: <Accessibility className={styles.skillIcon} /> },
+      { name: 'Slack', icon: <SiSlack className={styles.skillIcon} /> },
     ],
   },
 ];
