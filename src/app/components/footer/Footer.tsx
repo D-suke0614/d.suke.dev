@@ -22,7 +22,7 @@ export default function Footer() {
             <LuGithub className={styles.socialIcon} />
           </Link>
           <Link
-            href="https://twitter.com/dsuke"
+            href="https://x.com/0614d_suke"
             aria-label="Twitter profile"
             target="_blank"
             className={styles.socialLink}

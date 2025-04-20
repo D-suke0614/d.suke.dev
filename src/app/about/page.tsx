@@ -31,7 +31,7 @@ export default function AboutPage() {
                 <LuGithub className={styles.socialIcon} />
               </Link>
               <Link
-                href="https://twitter.com/dsuke"
+                href="https://x.com/0614d_suke"
                 target="_blank"
                 className={styles.socialLink}
               >
