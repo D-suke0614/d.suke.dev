@@ -4,28 +4,24 @@ import styles from './page.module.css';
 
 const works = [
   {
-    id: '3',
-    title: 'Personal Color',
-    description: '手軽にパーソナルカラーを診断できるサイトを作成しました。',
-    technologies: ['Next.js', 'React', 'TypeScript', 'face-api'],
+    title: '【LP】観光クロスオーバーサミット2025 in 関西・大阪万博',
+    company: '観光クロスオーバー協会',
+    technologies: ['Astro'],
+    imageUrl: '/kankou-xoversummit2025.png',
+    link: '/',
+  },
+  {
+    title: 'Personal Color診断サイト',
+    company: '個人開発',
+    technologies: ['Next.js', 'face-api'],
     imageUrl: '/personal-color.png',
     link: 'https://personal-color-tau.vercel.app/',
   },
   {
-    id: '2',
-    title: 'CRM',
-    description:
-      'CRMの新規開発において、フロントエンド開発と自動テストの実行基盤作りを行いました。',
-    technologies: ['Vue', 'GitHub Actions', 'Java', 'PostgreSQL'],
-    imageUrl: '/no_image.png',
-    link: 'https://www.e-sales.jp/',
-  },
-  {
-    id: '1',
-    title: '占いマッチングプラットフォーム RAYSEE メディアサイト',
-    description: '占いマッチングプラットフォームのメディアサイトの構築を行いました。',
-    technologies: ['WordPress', 'GitHub Actions'],
-    imageUrl: '/raysee.png',
+    title: '【メディアサイト構築】占いマッチングプラットフォーム RAYSEE',
+    company: '株式会社ALBONA',
+    technologies: ['WordPress'],
+    imageUrl: '/raysee-column.png',
     link: 'https://raysee.jp/column',
   },
 ];
@@ -37,8 +33,13 @@ export default function WorksPage() {
       <div className={styles.content}>
         <div className={styles.worksList}>
           {works.map((work) => (
-            <div key={work.id} className={styles.workItem}>
-              <div className={styles.workGrid}>
+            <div key={work.title} className={styles.workItem}>
+              <Link
+                href={work.link}
+                className={styles.workGrid}
+                rel="nofollow noreferrer"
+                target="_blank"
+              >
                 <div className={styles.imageContainer}>
                   <Image
                     src={work.imageUrl || '/placeholder.svg'}
@@ -50,7 +51,7 @@ export default function WorksPage() {
                 </div>
                 <div className={styles.details}>
                   <h2 className={styles.workTitle}>{work.title}</h2>
-                  <p className={styles.workDescription}>{work.description}</p>
+                  <p className={styles.workCompany}>{work.company}</p>
                   <h3 className={styles.technologiesTitle}>Technologies:</h3>
                   <div className={styles.technologies}>
                     {work.technologies.map((tech, index) => (
@@ -59,16 +60,9 @@ export default function WorksPage() {
                       </span>
                     ))}
                   </div>
-                  <Link
-                    href={work.link}
-                    className={styles.viewLink}
-                    rel="nofollow noreferrer"
-                    target="_blank"
-                  >
-                    View Project
-                  </Link>
+                  <span className={styles.viewLink}>View Project</span>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
