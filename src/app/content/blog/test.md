@@ -12,5 +12,5 @@ Next.js has revolutionized the way we build React applications, providing a powe
 First, let's create a new Next.js project using the App Router. The App Router is the newest routing system in Next.js, providing a more intuitive and powerful way to define routes and layouts.
 
 ```ts
-const sample = 2
+const sample = 2;
 ```
