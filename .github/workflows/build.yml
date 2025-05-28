@@ -1,0 +1,39 @@
+name: Build Test
+on:
+  pull_request:
+    types:
+      - opened # PRが作成されたとき
+      - synchronize # PRに新しいコミットがpushされたとき
+      - reopened # 閉じたPRが再オープンされたとき
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: cache node_modules
+        uses: actions/cache@v4
+        id: node_modules_cache_id
+        env:
+          cache-name: cache-node_modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+
+      - name: install dependencies
+        if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+        run: npm i
+
+      - name: Run Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
