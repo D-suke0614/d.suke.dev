@@ -6,7 +6,11 @@ export function generateStaticParams() {
   return paths.map((path) => path.params);
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+type BlogProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function BlogPostPage({ params }: BlogProps) {
   const { slug } = await params;
   // Pre-fetch the post data on the server
   const post = getPostBySlug(slug);
