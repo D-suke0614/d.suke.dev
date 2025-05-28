@@ -3,7 +3,7 @@
 import { motion, Variants } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import type React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styles from './mainContentWrapper.module.css';
 
 // Simple particles component without complex hooks
@@ -16,39 +16,43 @@ const SimpleParticles = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
-
   // Generate particles
-  const particles = Array.from({ length: 40 }, (_, i) => {
-    return {
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: 4 + Math.random() * 20,
-      duration: 60 + Math.random() * 120,
-      delay: Math.random() * 10,
-      type: Math.floor(Math.random() * 4), // 0: circle, 1: square, 2: triangle, 3: custom
-      opacity: 0.05 + Math.random() * 0.15, // Increased opacity for more pop
-      color:
-        i % 6 === 0
-          ? '#FF6B6B'
-          : // Hot pink
-            i % 6 === 1
-            ? '#4ECDC4'
-            : // Turquoise
-              i % 6 === 2
-              ? '#FFD166'
-              : // Yellow
-                i % 6 === 3
-                ? '#FF9A8B'
-                : // Salmon
-                  i % 6 === 4
-                  ? '#A78BFA'
-                  : // Purple
-                    '#06D6A0', // Mint
-      blur: Math.random() > 0.7 ? `${Math.random() * 5}px` : '0px',
-    };
-  });
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const particleCount = isMobile ? 20 : 40;
+  const particles = useMemo(() => {
+    return Array.from({ length: particleCount }, (_, i) => {
+      return {
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+        size: 4 + Math.random() * 20,
+        duration: 60 + Math.random() * 120,
+        delay: Math.random() * 10,
+        type: Math.floor(Math.random() * 4), // 0: circle, 1: square, 2: triangle, 3: custom
+        opacity: 0.05 + Math.random() * 0.15, // Increased opacity for more pop
+        color:
+          i % 6 === 0
+            ? '#FF6B6B'
+            : // Hot pink
+              i % 6 === 1
+              ? '#4ECDC4'
+              : // Turquoise
+                i % 6 === 2
+                ? '#FFD166'
+                : // Yellow
+                  i % 6 === 3
+                  ? '#FF9A8B'
+                  : // Salmon
+                    i % 6 === 4
+                    ? '#A78BFA'
+                    : // Purple
+                      '#06D6A0', // Mint
+        blur: Math.random() > 0.7 ? `${Math.random() * 5}px` : '0px',
+      };
+    });
+  }, [particleCount]);
+
+  if (!mounted) return null;
 
   return (
     <div className={styles.particleSystem}>
@@ -299,12 +303,22 @@ const ColorfulShapes = () => {
 };
 
 export default function MainContentWrapper({ children }: { children: React.ReactNode }) {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const onVisibilityChange = () => {
+      setIsVisible(document.visibilityState === 'visible');
+    };
+
+    document.addEventListener('visibilitychange', onVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', onVisibilityChange);
+  }, []);
   return (
     <main className={styles.main}>
       <div className={styles.popGradientBackground}></div>
       <ColorfulShapes />
       <Grid3DEffect />
-      <SimpleParticles />
+      {isVisible ?? <SimpleParticles />}
       <SimpleGradientOverlay />
       <EmojiFloaters />
       <div className={styles.content}>{children}</div>
