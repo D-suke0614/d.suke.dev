@@ -1,0 +1,9 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" ry="12" fill="#E0F2FE"/> <!-- Light Sky Blue bg -->
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Arial Rounded MT Bold', Arial, sans-serif" font-size="36" font-weight="bold" fill="#3B82F6"> <!-- Blue-500 -->
+    <tspan>D</tspan>
+  </text>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-size="48" fill="#60A5FA" opacity="0.7"> <!-- Blue-400 -->
+    <tspan dx="-26" dy="-2">&lt;</tspan><tspan dx="40" dy="2">/</tspan><tspan dx="-3" dy="0">&gt;</tspan>
+  </text>
+</svg>
