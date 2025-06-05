@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, Variants } from 'framer-motion';
+import type { Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import type React from 'react';
 import { useEffect, useMemo, useState } from 'react';
