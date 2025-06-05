@@ -2,7 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 
-const works = [
+type Work = {
+  title: string;
+  company: string;
+  technologies: string[];
+  imageUrl: string;
+  link: string;
+};
+
+const works: Work[] = [
   {
     title: '【LP】観光クロスオーバーサミット2025 in 関西・大阪万博',
     company: '観光クロスオーバー協会',
@@ -26,13 +34,42 @@ const works = [
   },
 ];
 
+const ImageContainer = ({ work }: { work: Work }) => {
+  return (
+    <>
+      <div className={styles.imageContainer}>
+        <Image
+          src={work.imageUrl || '/placeholder.svg'}
+          alt={work.title}
+          width={500}
+          height={300}
+          className={styles.image}
+        />
+      </div>
+      <div className={styles.details}>
+        <h2 className={styles.workTitle}>{work.title}</h2>
+        <p className={styles.workCompany}>{work.company}</p>
+        <h3 className={styles.technologiesTitle}>Technologies:</h3>
+        <div className={styles.technologies}>
+          {work.technologies.map((tech, index) => (
+            <span key={index} className={styles.technology}>
+              {tech}
+            </span>
+          ))}
+        </div>
+        <span className={styles.viewLink}>View Project</span>
+      </div>
+    </>
+  );
+};
+
 export default function WorksPage() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Works</h1>
       <div className={styles.content}>
         <div className={styles.worksList}>
-          {works.map((work) => (
+          {works.map((work: Work) => (
             <div key={work.title} className={styles.workItem}>
               <Link
                 href={work.link}
@@ -40,28 +77,7 @@ export default function WorksPage() {
                 rel="nofollow noreferrer"
                 target="_blank"
               >
-                <div className={styles.imageContainer}>
-                  <Image
-                    src={work.imageUrl || '/placeholder.svg'}
-                    alt={work.title}
-                    width={500}
-                    height={300}
-                    className={styles.image}
-                  />
-                </div>
-                <div className={styles.details}>
-                  <h2 className={styles.workTitle}>{work.title}</h2>
-                  <p className={styles.workCompany}>{work.company}</p>
-                  <h3 className={styles.technologiesTitle}>Technologies:</h3>
-                  <div className={styles.technologies}>
-                    {work.technologies.map((tech, index) => (
-                      <span key={index} className={styles.technology}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <span className={styles.viewLink}>View Project</span>
-                </div>
+                <ImageContainer work={work} />
               </Link>
             </div>
           ))}
