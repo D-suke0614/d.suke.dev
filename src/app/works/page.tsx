@@ -8,6 +8,7 @@ type Work = {
   technologies: string[];
   imageUrl: string;
   link: string;
+  isPreview?: boolean;
 };
 
 const works: Work[] = [
@@ -16,7 +17,8 @@ const works: Work[] = [
     company: '観光クロスオーバー協会',
     technologies: ['Astro'],
     imageUrl: '/kankou-xoversummit2025.png',
-    link: '/',
+    link: 'https://kankou-xoversummit2025.pages.dev/',
+    isPreview: true,
   },
   {
     title: 'Personal Color診断サイト',
@@ -57,7 +59,12 @@ const ImageContainer = ({ work }: { work: Work }) => {
             </span>
           ))}
         </div>
-        <span className={styles.viewLink}>View Project</span>
+        {work.link ? <span className={styles.viewLink}>View Project</span> : <></>}
+        {work.link && work.isPreview ? (
+          <span className={styles.annotation}>※PJ都合でプレビュー環境に遷移します</span>
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );
@@ -71,14 +78,20 @@ export default function WorksPage() {
         <div className={styles.worksList}>
           {works.map((work: Work) => (
             <div key={work.title} className={styles.workItem}>
-              <Link
-                href={work.link}
-                className={styles.workGrid}
-                rel="nofollow noreferrer"
-                target="_blank"
-              >
-                <ImageContainer work={work} />
-              </Link>
+              {work.link ? (
+                <Link
+                  href={work.link}
+                  className={styles.workGrid}
+                  rel="nofollow noreferrer"
+                  target="_blank"
+                >
+                  <ImageContainer work={work} />
+                </Link>
+              ) : (
+                <div className={styles.workGrid}>
+                  <ImageContainer work={work} />
+                </div>
+              )}
             </div>
           ))}
         </div>

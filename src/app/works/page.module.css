@@ -96,6 +96,12 @@
   transition: text-decoration 0.2s;
 }
 
+.annotation {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #484848;
+}
+
 .workGrid:hover .image {
   scale: 1.05;
 }
