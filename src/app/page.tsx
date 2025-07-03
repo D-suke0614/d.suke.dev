@@ -8,8 +8,8 @@ export default function Home() {
         <h1 className={styles.title}>I&apos;m D.suke</h1>
         <p className={styles.subtitle}>Web Developer</p>
         <div className={styles.navigation}>
-          <Link href="/blog" className={styles.navLink}>
-            Blog
+          <Link href="/about" className={styles.navLink}>
+            About
           </Link>
           <Link href="/works" className={styles.navLink}>
             Works
@@ -17,8 +17,8 @@ export default function Home() {
           <Link href="/skills" className={styles.navLink}>
             Skills
           </Link>
-          <Link href="/about" className={styles.navLink}>
-            About
+          <Link href="/blog" className={styles.navLink}>
+            Blog
           </Link>
         </div>
       </div>

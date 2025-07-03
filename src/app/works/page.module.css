@@ -51,6 +51,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: scale 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 }
 
 .details {
@@ -64,7 +65,7 @@
   margin-bottom: 0.75rem;
 }
 
-.workDescription {
+.workCompany {
   color: var(--color-muted-foreground);
   margin-bottom: 1rem;
 }
@@ -95,6 +96,16 @@
   transition: text-decoration 0.2s;
 }
 
-.viewLink:hover {
+.annotation {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #484848;
+}
+
+.workGrid:hover .image {
+  scale: 1.05;
+}
+
+.workGrid:hover .viewLink {
   text-decoration: underline;
 }
