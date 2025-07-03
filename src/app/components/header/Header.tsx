@@ -32,8 +32,8 @@ export default function Header() {
             D.suke
           </Link>
           <div className={styles.links}>
-            <Link href="/blog" className={styles.link}>
-              Blog
+            <Link href="/about" className={styles.link}>
+              About
             </Link>
             <Link href="/works" className={styles.link}>
               Works
@@ -41,8 +41,8 @@ export default function Header() {
             <Link href="/skills" className={styles.link}>
               Skills
             </Link>
-            <Link href="/about" className={styles.link}>
-              About
+            <Link href="/blog" className={styles.link}>
+              Blog
             </Link>
             <div className={styles.actions}>
               <Link
