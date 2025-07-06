@@ -51,15 +51,13 @@ export default function AboutPage() {
           </div>
 
           <div className={styles.imageContainer}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src="/profile.jpg"
-                alt="D.suke - Frontend Engineer"
-                width={240}
-                height={240}
-                className={styles.image}
-              />
-            </div>
+            <Image
+              src="/profile-icon1.png"
+              alt="D.suke - Frontend Engineer"
+              width={261}
+              height={300}
+              className={styles.image}
+            />
           </div>
         </div>
       </div>

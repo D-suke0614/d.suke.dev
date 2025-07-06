@@ -39,15 +39,13 @@ const works: Work[] = [
 const ImageContainer = ({ work }: { work: Work }) => {
   return (
     <>
-      <div className={styles.imageContainer}>
-        <Image
-          src={work.imageUrl || '/placeholder.svg'}
-          alt={work.title}
-          width={500}
-          height={300}
-          className={styles.image}
-        />
-      </div>
+      <Image
+        src={work.imageUrl || '/placeholder.svg'}
+        alt={work.title}
+        width={500}
+        height={300}
+        className={styles.image}
+      />
       <div className={styles.details}>
         <h2 className={styles.workTitle}>{work.title}</h2>
         <p className={styles.workCompany}>{work.company}</p>
