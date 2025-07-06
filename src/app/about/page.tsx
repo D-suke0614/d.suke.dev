@@ -52,7 +52,7 @@ export default function AboutPage() {
 
           <div className={styles.imageContainer}>
             <Image
-              src="/profile-icon1.png"
+              src="/profile-icon.png"
               alt="D.suke - Frontend Engineer"
               width={261}
               height={300}
