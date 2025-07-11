@@ -19,7 +19,7 @@ Next.js 15.2.2のポートフォリオサイト（d.suke.dev）をCloudflare Pag
 
 ### 1. 統合ブログデータ構造の設計
 
-- [ ] BlogPost型を拡張
+- [x] BlogPost型を拡張
   ```typescript
   export type BlogPost = {
     slug: string;
@@ -36,23 +36,23 @@ Next.js 15.2.2のポートフォリオサイト（d.suke.dev）をCloudflare Pag
 
 ### 2. ビルド時データ生成スクリプト作成
 
-- [ ] `scripts/generate-blog-data.js`を作成
-- [ ] 内部Markdownファイル読み込み機能
-- [ ] タイムスタンプ順ソート機能
-- [ ] `public/blog-data.json`出力機能
-- [ ] 環境変数による開発/本番モード切り替え
+- [x] `scripts/generate-blog-data.js`を作成
+- [x] 内部Markdownファイル読み込み機能
+- [x] タイムスタンプ順ソート機能
+- [x] `public/blog-data.json`出力機能
+- [x] 環境変数による開発/本番モード切り替え
 
 ### 3. package.json修正
 
-- [ ] 開発用スクリプト追加
+- [x] 開発用スクリプト追加
   ```json
   "dev": "npm run generate-blog-data:dev && next dev"
   ```
-- [ ] ビルド用スクリプト修正
+- [x] ビルド用スクリプト修正
   ```json
   "build": "npm run generate-blog-data:prod && next build"
   ```
-- [ ] データ生成スクリプト追加
+- [x] データ生成スクリプト追加
   ```json
   "generate-blog-data:dev": "node scripts/generate-blog-data.js --dev",
   "generate-blog-data:prod": "node scripts/generate-blog-data.js --prod"
@@ -60,24 +60,24 @@ Next.js 15.2.2のポートフォリオサイト（d.suke.dev）をCloudflare Pag
 
 ### 4. API Routes削除
 
-- [ ] `src/app/api/posts/route.ts`を削除
+- [x] `src/app/api/posts/route.ts`を削除
 
 ### 5. lib/blog.ts修正
 
-- [ ] サーバーサイド専用関数として残す
-- [ ] ビルド時データ生成で使用
+- [x] サーバーサイド専用関数として残す
+- [x] ビルド時データ生成で使用
 
 ### 6. ブログ一覧ページ修正
 
-- [ ] `src/app/blog/page.tsx`を修正
-- [ ] `/api/posts`から`/blog-data.json`へ変更
+- [x] `src/app/blog/page.tsx`を修正
+- [x] `/api/posts`から`/blog-data.json`へ変更
 - [ ] 記事ソース別アイコン表示準備
 
 ### 7. ブログ詳細ページ修正
 
-- [ ] `src/app/blog/[slug]/page.tsx`を修正
-- [ ] `generateStaticParams`を静的データベースに変更
-- [ ] 静的データからの記事取得に変更
+- [x] `src/app/blog/[slug]/page.tsx`を修正
+- [x] `generateStaticParams`を静的データベースに変更
+- [x] 静的データからの記事取得に変更
 
 ---
 
@@ -176,9 +176,9 @@ Next.js 15.2.2のポートフォリオサイト（d.suke.dev）をCloudflare Pag
 
 ### Phase 1進捗
 
-- 開始日:
-- 完了予定日:
-- 実際の完了日:
+- 開始日: 2025-01-11
+- 完了予定日: 2025-01-11
+- 実際の完了日: 2025-01-11 (ほぼ完了、記事ソース別アイコン表示準備のみ残存)
 
 ### Phase 2進捗
 

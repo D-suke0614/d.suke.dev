@@ -4,6 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - 必ず日本語で入力すること
 - コードの修正を行った場合には、修正後にプロジェクトがビルドできることを確認すること
+- 実装計画書などのドキュメントはチェックできる形式で.mdファイルにて作成すること
 
 ## プロジェクト概要
 
@@ -11,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 実装方針
 
-- フェーズ別実装：実装計画書に従って段階的に実装
+- フェーズ別実装：実装計画書に従って段階的に実装し実装が完了したものにはチェックをつける
 
 ## 開発コマンド
 
