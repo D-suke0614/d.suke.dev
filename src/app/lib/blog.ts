@@ -8,7 +8,10 @@ export type BlogPost = {
   date: string;
   category: string;
   excerpt: string;
-  content: string;
+  content?: string; // 外部記事の場合はundefined
+  url: string; // 外部記事の場合は外部URL、内部記事の場合は内部パス
+  source: 'internal' | 'zenn' | 'note';
+  tags?: string[];
 };
 
 const postsDirectory = path.join(process.cwd(), 'src/app/content/blog');
@@ -44,6 +47,9 @@ export function getPostBySlug(slug: string): BlogPost | null {
       category: data.category,
       excerpt: data.excerpt,
       content,
+      url: `/blog/${slug}`,
+      source: 'internal',
+      tags: data.tags || [],
     };
   } catch (e) {
     console.error(`Error reading post ${slug}:`, e);
@@ -75,4 +81,27 @@ export function getAllPosts(): BlogPost[] {
     console.error('Error reading all posts:', error);
     return [];
   }
+}
+
+// 静的データからの記事取得（ビルド時生成された blog-data.json を使用）
+export function getStaticBlogData(): BlogPost[] {
+  try {
+    const dataPath = path.join(process.cwd(), 'public/blog-data.json');
+    if (!fs.existsSync(dataPath)) {
+      console.warn('Blog data file not found:', dataPath);
+      return [];
+    }
+
+    const fileContents = fs.readFileSync(dataPath, 'utf8');
+    return JSON.parse(fileContents);
+  } catch (error) {
+    console.error('Error reading static blog data:', error);
+    return [];
+  }
+}
+
+// 静的データから特定の記事を取得
+export function getPostBySlugFromStatic(slug: string): BlogPost | null {
+  const posts = getStaticBlogData();
+  return posts.find((post) => post.slug === slug) || null;
 }

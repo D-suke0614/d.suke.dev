@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run generate-blog-data:dev && next dev",
+    "build": "npm run generate-blog-data:prod && next build",
     "start": "next start",
+    "generate-blog-data:dev": "node scripts/generate-blog-data.js --dev",
+    "generate-blog-data:prod": "node scripts/generate-blog-data.js --prod",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",

@@ -9,7 +9,7 @@ import ReactMarkDown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import styles from './blog-post.module.css';
 
-function TableOfContents({ content }: { content: string }) {
+function TableOfContents({ content }: { content?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [headings, setHeadings] = useState<
     Array<{ text: string; level: number; slug: string }>
@@ -17,6 +17,7 @@ function TableOfContents({ content }: { content: string }) {
 
   useEffect(() => {
     const extractHeadings = () => {
+      if (!content) return [];
       const headingRegex = /^(#{1,3})\s+(.+)$/gm;
       const matches = [...content.matchAll(headingRegex)];
 
@@ -170,7 +171,7 @@ export default function BlogPostClient({ post }: { post: BlogPost | null }) {
                 },
               }}
             >
-              {post.content}
+              {post.content || ''}
             </ReactMarkDown>
           </div>
           <div className={styles.shareSection}>

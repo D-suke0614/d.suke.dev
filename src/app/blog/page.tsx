@@ -21,7 +21,7 @@ export default function BlogPage() {
     // In a client component, we need to fetch the posts on the client side
     async function fetchPosts() {
       try {
-        const res = await fetch('/api/posts');
+        const res = await fetch('/blog-data.json');
         const data = await res.json();
         setPosts(data);
       } catch (error) {

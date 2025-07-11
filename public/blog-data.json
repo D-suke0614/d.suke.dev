@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "test",
+    "title": "Building a Modern Next.js Application",
+    "date": "Sat Mar 01 2025 09:00:00 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "Learn how to build a modern, performant web application using Next.js and React Server Components.",
+    "content": "\nNext.js has revolutionized the way we build React applications, providing a powerful framework for server-side rendering, static site generation, and more. In this post, we'll explore how to build a modern, performant web application using Next.js and React Server Components.\n\n## Getting Started with Next.js\n\nFirst, let's create a new Next.js project using the App Router. The App Router is the newest routing system in Next.js, providing a more intuitive and powerful way to define routes and layouts.\n\n```ts\nconst sample = 2;\n```\n",
+    "url": "/blog/test",
+    "source": "internal",
+    "tags": []
+  }
+]
