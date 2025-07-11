@@ -1,9 +1,11 @@
-import { getAllPostSlugs, getPostBySlug } from '@/app/lib/blog';
+import { getPostBySlugFromStatic, getStaticBlogData } from '@/app/lib/blog';
 import BlogPostClient from './BlogPostClient';
 
 export function generateStaticParams() {
-  const paths = getAllPostSlugs();
-  return paths.map((path) => path.params);
+  const posts = getStaticBlogData();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 type BlogProps = {
@@ -12,8 +14,8 @@ type BlogProps = {
 
 export default async function BlogPostPage({ params }: BlogProps) {
   const { slug } = await params;
-  // Pre-fetch the post data on the server
-  const post = getPostBySlug(slug);
+  // Pre-fetch the post data from static data
+  const post = getPostBySlugFromStatic(slug);
 
   // Pass the post data to the client component
   return <BlogPostClient post={post} />;
