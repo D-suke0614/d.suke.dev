@@ -36,6 +36,7 @@
     "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
+    "dotenv": "^17.2.0",
     "eslint": "^8",
     "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "^10.1.1",
