@@ -8,7 +8,8 @@ const QiitaProvider = require('./qiita-provider');
  */
 class ProviderManager {
   constructor(isDev = false) {
-    this.isDev = isDev;
+    this.isDev = false;
+    // this.isDev = isDev;
     this.providers = [];
     this.initializeProviders();
   }
@@ -26,6 +27,12 @@ class ProviderManager {
     // 開発環境では外部記事取得を無効化（高速起動のため）
     const externalEnabled =
       !this.isDev && process.env.ENABLE_EXTERNAL_ARTICLES !== 'false';
+    // const externalEnabled =
+    //   !this.isDev && process.env.ENABLE_EXTERNAL_ARTICLES !== 'false';
+
+    console.log(`External articles this.isDev: ${this.isDev}`);
+    console.log(`External articles process.env.ENABLE_EXTERNAL_ARTICLES !== 'false': ${process.env.ENABLE_EXTERNAL_ARTICLES !== 'false'}`);
+    console.log(`External articles externalEnabled: ${externalEnabled}`);
 
     // Zennプロバイダー
     const zennConfig = {

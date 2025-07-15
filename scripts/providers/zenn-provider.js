@@ -15,6 +15,7 @@ class ZennProvider extends BaseProvider {
    * @returns {Promise<Array>} Zenn記事データの配列
    */
   async fetchArticles() {
+    console.log('fetch zenn')
     const url = `${this.apiEndpoint}?username=${this.config.username}&order=latest`;
 
     try {
@@ -144,6 +145,8 @@ class ZennProvider extends BaseProvider {
    * @returns {boolean} 有効かどうか
    */
   isEnabled() {
+    console.log(`Checking if ZennProvider is enabled: ${this.config.enabled}`);
+    console.log(`Checking if ZennProvider is username: ${this.config.username}`);
     return Boolean(
       this.config.enabled && this.config.username && this.config.username.trim() !== '',
     );

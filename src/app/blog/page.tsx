@@ -1,8 +1,10 @@
 'use client';
 
 import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { SiZenn } from 'react-icons/si';
 import styles from './page.module.css';
 
 // Import the blog utility functions with the correct path
@@ -91,9 +93,13 @@ export default function BlogPage() {
   const getSourceIcon = useCallback((source: string) => {
     switch (source) {
       case 'zenn':
-        return { icon: '📝', label: 'Zenn', color: '#3EA8FF' };
+        return { icon: <SiZenn />, label: 'Zenn', color: '#3EA8FF' };
       case 'note':
-        return { icon: '📄', label: 'Note', color: '#41C9B4' };
+        return {
+          icon: <Image src="/note-icon.png" width={12} height={12} alt="note-icon" />,
+          label: 'Note',
+          color: '#41C9B4',
+        };
       case 'qiita':
         return { icon: '📚', label: 'Qiita', color: '#55C500' };
       case 'internal':
@@ -154,15 +160,15 @@ export default function BlogPage() {
             </button>
             <button
               onClick={() => setActiveFilter('zenn')}
-              className={`${styles.filterButton} ${activeFilter === 'zenn' ? styles.activeFilter : ''}`}
+              className={`${styles.filterButton} ${styles.filterZenn} ${activeFilter === 'zenn' ? styles.activeFilter : ''}`}
             >
-              📝 Zenn
+              <SiZenn /> Zenn
             </button>
             <button
               onClick={() => setActiveFilter('note')}
-              className={`${styles.filterButton} ${activeFilter === 'note' ? styles.activeFilter : ''}`}
+              className={`${styles.filterButton} ${styles.filterNote} ${activeFilter === 'note' ? styles.activeFilter : ''}`}
             >
-              📄 Note
+              <Image src="/note-logo.png" width={42} height={16} alt="note-icon" />
             </button>
             <button
               onClick={() => setActiveFilter('qiita')}
