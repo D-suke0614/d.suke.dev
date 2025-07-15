@@ -10,7 +10,7 @@ export type BlogPost = {
   excerpt: string;
   content?: string; // 外部記事の場合はundefined
   url: string; // 外部記事の場合は外部URL、内部記事の場合は内部パス
-  source: 'internal' | 'zenn' | 'note';
+  source: 'internal' | 'zenn' | 'note' | 'qiita';
   tags?: string[];
 };
 

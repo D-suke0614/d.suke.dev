@@ -1,5 +1,29 @@
 [
   {
+    "slug": "zenn-82a47733cd34ae",
+    "title": "Googleの対話型AIエージェント「Gemini CLI」を使ってみた",
+    "date": "Thu Jun 26 2025 01:41:18 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "🤖 Googleの対話型AIエージェント「Gemini CLI」を使ってみた...",
+    "url": "https://zenn.dev/d_suke0614/articles/82a47733cd34ae",
+    "source": "zenn",
+    "tags": [],
+    "likes": 1,
+    "emoji": "🤖"
+  },
+  {
+    "slug": "zenn-7543608560b213",
+    "title": "Cloudflare D1 × Drizzle を使ったセットアップ手順",
+    "date": "Sat May 03 2025 15:15:17 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "🐙 Cloudflare D1 × Drizzle を使ったセットアップ手順...",
+    "url": "https://zenn.dev/d_suke0614/articles/7543608560b213",
+    "source": "zenn",
+    "tags": [],
+    "likes": 2,
+    "emoji": "🐙"
+  },
+  {
     "slug": "test",
     "title": "Building a Modern Next.js Application",
     "date": "Sat Mar 01 2025 09:00:00 GMT+0900 (日本標準時)",
@@ -9,5 +33,437 @@
     "url": "/blog/test",
     "source": "internal",
     "tags": []
+  },
+  {
+    "slug": "qiita-56060e0dba9a0ec557a7",
+    "title": "git pullをしたら`fatal: bad object refs/remotes/origin/main 2`と言われてしまった時の対処法",
+    "date": "Sat Aug 24 2024 22:48:23 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "事象 普段ObsidianとGitHubを使って複数端末でドキュメント管理をしているのですが、ある日突然をするとタイトルのようなエラーが表示されていました。 原因 というファイルが生成されているため 解決策  問題となってるファイルを削除することで解決することができました。",
+    "url": "https://qiita.com/D_suke/items/56060e0dba9a0ec557a7",
+    "source": "qiita",
+    "tags": [
+      "Git"
+    ],
+    "likes": 2,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "zenn-b11cfc99f3859f",
+    "title": "【必見】同一リポジトリで複数のGASプロジェクトを管理する方法",
+    "date": "Tue May 28 2024 23:21:00 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "💨 【必見】同一リポジトリで複数のGASプロジェクトを管理する方法...",
+    "url": "https://zenn.dev/d_suke0614/articles/b11cfc99f3859f",
+    "source": "zenn",
+    "tags": [],
+    "likes": 1,
+    "emoji": "💨"
+  },
+  {
+    "slug": "zenn-d861cb70125b59",
+    "title": "Error: Cannot read properties of undefined (reading 'Provider')の対処法",
+    "date": "Wed Mar 27 2024 23:06:59 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "😈 Error: Cannot read properties of undefined (reading 'Provider')の対処法...",
+    "url": "https://zenn.dev/d_suke0614/articles/d861cb70125b59",
+    "source": "zenn",
+    "tags": [],
+    "likes": 1,
+    "emoji": "😈"
+  },
+  {
+    "slug": "qiita-ef375ae763f59fdc5775",
+    "title": "Astro + pagefindで手軽に検索機能の実装",
+    "date": "Mon Mar 11 2024 20:57:23 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "pagefindは、大規模なサイトでも優れたパフォーマンスを発揮する、静的サイト向け全文検索ライブラリです。 UIも提供されているので、サクッと導入することできます。 今回はAstroのプロジェクトにpageindexを導入してみます。 pagefindのインストール まずはとというパッケージをインストールしていきます。 pnpmやyarnを使っている人は適宜読み替えてください。 検索用コン...",
+    "url": "https://qiita.com/D_suke/items/ef375ae763f59fdc5775",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "Search",
+      "astro",
+      "pagefind"
+    ],
+    "likes": 5,
+    "stocks": 2,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "zenn-21f63d51626e55",
+    "title": "Astro + pagefindで手軽に検索機能の実装",
+    "date": "Sun Mar 10 2024 23:16:27 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "👾 Astro + pagefindで手軽に検索機能の実装...",
+    "url": "https://zenn.dev/d_suke0614/articles/21f63d51626e55",
+    "source": "zenn",
+    "tags": [],
+    "likes": 6,
+    "emoji": "👾"
+  },
+  {
+    "slug": "zenn-9a2b955068c79f",
+    "title": "nodenvでnode.jsのバージョン管理を楽にする",
+    "date": "Tue Mar 05 2024 21:52:41 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "🤖 nodenvでnode.jsのバージョン管理を楽にする...",
+    "url": "https://zenn.dev/d_suke0614/articles/9a2b955068c79f",
+    "source": "zenn",
+    "tags": [],
+    "likes": 1,
+    "emoji": "🤖"
+  },
+  {
+    "slug": "qiita-f8305e3ac436910ca1c8",
+    "title": "【.gitignore】.gitignoreを後から設定し、gitの管理対象外にする方法",
+    "date": "Thu Feb 15 2024 23:12:00 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": ".gitignoreを作らずに開発を進めていて、後からgit管理をしたくないファイルやディレクトリをgitの管理対象外に売る方法を解説します。 ちなみに、.gitignoreとはgitの管理対象外にするファイルやディレクトリを指定するためのファイル .gitignoreを後から設定し、gitの管理対象外にする方法 １.gitignoreファイルの作成 まずは.gitignoreという名前のフ...",
+    "url": "https://qiita.com/D_suke/items/f8305e3ac436910ca1c8",
+    "source": "qiita",
+    "tags": [
+      "Git",
+      "GitHub",
+      ".gitignore"
+    ],
+    "likes": 0,
+    "stocks": 1,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-2a66200b0ed352574175",
+    "title": "BEMの個人的Tips",
+    "date": "Mon Feb 12 2024 00:05:20 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "BEMとは Block Element Modifierの略で、CSSを設計・命名していく手法の１つである。 Block: 大枠となる独立した要素 Element: Blockを構成する要素 Modifier: BlockやElementの状態 BEMのtips Blockの単位と大きさは適当でOK Blockに対してModifierは使わない Blockにはmarginを指定しない Blo...",
+    "url": "https://qiita.com/D_suke/items/2a66200b0ed352574175",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "CSS",
+      "scss",
+      "bem",
+      "CSS設計"
+    ],
+    "likes": 0,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-312e110dc14b79eeafa9",
+    "title": "【PostgreSQL】SELECTしてきた値をタイムゾーン補正を行い、指定したフォーマットで日付と時刻を変換する方法",
+    "date": "Wed Jan 24 2024 02:32:52 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに DBからSELECTしてきた値をタイムゾーン補正を行い、指定したフォーマットで日付と時刻を変換する機会があったので、その方法をまとめておこうと思います。  PostgreSQLでは動作確認済みですが、他のDBでは確認していないのでその点よろしくお願いします。 9時間マイナスする場合    ## 9時間プラスする場合    ## 解説 your_column_name::timest...",
+    "url": "https://qiita.com/D_suke/items/312e110dc14b79eeafa9",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "PostgreSQL",
+      "DB"
+    ],
+    "likes": 1,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "zenn-d9419d69439e7d",
+    "title": "Did you mean to set the 'moduleResolution' option to 'nodenext', or to",
+    "date": "Wed Oct 18 2023 00:07:39 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "🌏 Did you mean to set the 'moduleResolution' option to 'nodenext', or to...",
+    "url": "https://zenn.dev/d_suke0614/articles/d9419d69439e7d",
+    "source": "zenn",
+    "tags": [],
+    "likes": 0,
+    "emoji": "🌏"
+  },
+  {
+    "slug": "qiita-976af9a7ae05cdeb70aa",
+    "title": "Did you mean to set the 'moduleResolution' option to 'nodenext', or to add aliases to the 'paths' option?の対処法",
+    "date": "Wed Oct 18 2023 00:05:00 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに node.jsでTypeScriptを使っていたので、dotenvを使用して環境変数を読み込もうとしたときに、表題のエラーが出ました。 調べてもぱっとすぐに日本語の記事が出てこなかったため、備忘録も兼ねてここに残しておきます。 解決方法 tsconfig.jsonのcompilerOptionに下記設定を追加 エラーの原因 tsconfig.jsonの設定でtargetを以降を設定...",
+    "url": "https://qiita.com/D_suke/items/976af9a7ae05cdeb70aa",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "Node.js",
+      "TypeScript"
+    ],
+    "likes": 1,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "zenn-c7b0fb0ac1fb3b",
+    "title": "PostgreSQLのVACUUMについて",
+    "date": "Sat Oct 14 2023 00:31:39 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "📮 PostgreSQLのVACUUMについて...",
+    "url": "https://zenn.dev/d_suke0614/articles/c7b0fb0ac1fb3b",
+    "source": "zenn",
+    "tags": [],
+    "likes": 0,
+    "emoji": "📮"
+  },
+  {
+    "slug": "qiita-624fbac566742c8bde2d",
+    "title": "PostgreSQLのVACUUMについて",
+    "date": "Sat Oct 14 2023 00:09:40 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "vacuumとは 公式ドキュメント：https://www.postgresql.jp/document/9.6/html/sql-vacuum.html 公式ドキュメントより PostgreSQLではデータを削除しても、実際には削除フラグがついているだけで完全には削除されておらず、見えなくなっているだけ。 VACUUMをすることで、削除フラグがついたデータを完全に消し去ることができ、それに...",
+    "url": "https://qiita.com/D_suke/items/624fbac566742c8bde2d",
+    "source": "qiita",
+    "tags": [
+      "PostgreSQL",
+      "vacuum"
+    ],
+    "likes": 0,
+    "stocks": 1,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "zenn-9973f1eee884f8",
+    "title": "Code Deploy agent for Windows Serverのインストールと確認方法",
+    "date": "Sat Sep 16 2023 00:37:30 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "😉 Code Deploy agent for Windows Serverのインストールと確認方法...",
+    "url": "https://zenn.dev/d_suke0614/articles/9973f1eee884f8",
+    "source": "zenn",
+    "tags": [],
+    "likes": 0,
+    "emoji": "😉"
+  },
+  {
+    "slug": "qiita-cedac117e571dc78f85c",
+    "title": "Code Deploy agent for Windows Serverのインストールと確認方法",
+    "date": "Sat Sep 16 2023 00:34:30 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "１．下記サイトにアクセスし、Use a direct link内にあるEC2が所属しているRegionのリンクからインストーラーをダウンロードする （コマンドでもできるけどこれが１番楽） https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-windows.htm...",
+    "url": "https://qiita.com/D_suke/items/cedac117e571dc78f85c",
+    "source": "qiita",
+    "tags": [
+      "Windows",
+      "AWS",
+      "CodeDeploy"
+    ],
+    "likes": 0,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-53e26beaf5157eb928a3",
+    "title": "【JS】some()とevery()がとても便利だったのでまとめてみた",
+    "date": "Sun Feb 26 2023 19:05:13 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに some()とevery()がとても便利だったのでメモ的にまとめてみました。 もし誰かのお役立てば幸いです。 some()とevery() どちらも配列の要素を、指定した条件と比較してtrue　/　falseを返す関数です。 それぞれの違いを、サンプルコードも交えながら解説します。 some() some()は配列内に、指定した条件を満たす要素が１つでもあればtrueを返します。 ...",
+    "url": "https://qiita.com/D_suke/items/53e26beaf5157eb928a3",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "Vue.js",
+      "React"
+    ],
+    "likes": 3,
+    "stocks": 1,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-2a1d8d4e4fd3c7d12b79",
+    "title": "【Next.js】好きな画像データをfaviconに設定する方法 〜TSでも怒られない〜",
+    "date": "Sat Feb 11 2023 12:09:40 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "【はじめに】 先日Next.jsの環境構築を終えて、さあ開発していくぞ！と思った矢先、 「faviconを好きな画像に変更したいけど、どうしたらいいんだろう、、？」 と、ふと思い調べてみても、なかなか自分の求めている情報に出会えなかったため、備忘録も兼ねてここにまとめておきます。 【環境】 Node.js - 16.14.0 Next.js - 13.1.4 React - 18.2.0 T...",
+    "url": "https://qiita.com/D_suke/items/2a1d8d4e4fd3c7d12b79",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js"
+    ],
+    "likes": 1,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-9ef149177c3f880aecb8",
+    "title": "GitHubで管理したくないディレクトリを間違えてGitHubにあげてしまった！そんな時の対処方法",
+    "date": "Sun Jan 15 2023 00:37:48 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "【はじめに】 GitHubで管理したくないファイルを間違えてGitHubにあげてしまった！ そんな時の対処法について備忘録も兼ね、node_modulesを例に簡単にまとめておきます。 【手順】 プロジェクトのルートディレクトリに.gitignoreを作成する .gitignoreにGitHubで管理したくないディレクトリを追加する 対象のディレクトリをgitの追跡対象から外す .gitig...",
+    "url": "https://qiita.com/D_suke/items/9ef149177c3f880aecb8",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "Git",
+      "GitHub",
+      "備忘録"
+    ],
+    "likes": 1,
+    "stocks": 3,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-20d124080b5e0ac231bc",
+    "title": "【React】create-react-appで出たエラーの対処法",
+    "date": "Sun Oct 16 2022 14:16:05 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに 普段はVue.jsを使っているのですが、React.jsの学習をしようと思い、create-react-appでプロジェクトを作ろうとしたときに出たエラーの対処法について、備忘録も兼ねて残しておきます。 エラー内容 create-react-appを実行したときにバージョンがアップされました。 そのバージョンを用いて、プロジェクトを作ろうとすると、使用しているバージョンが古いからダ...",
+    "url": "https://qiita.com/D_suke/items/20d124080b5e0ac231bc",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "初心者",
+      "React",
+      "create-react-app"
+    ],
+    "likes": 1,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-444089bf9fcb8e10cdbb",
+    "title": "【Vue.js】親コンポーネントである処理が終了してから子コンポーネントを呼び出す方法",
+    "date": "Mon Oct 10 2022 12:54:23 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに 今回は、Vue.jsで親コンポーネントで、ある処理が終わったタイミングで子コンポーネントを有効にする方法を備忘録も兼ねてまとめます。 もっと良い方法があるよって方はぜひコメント欄で教えていただけると幸いです。 実現したいこと 親コンポーネントでmounted内で非同期処理を用いてデータを取得 取得したデータをmounted内で子コンポーネントにpropsで渡し、親コンポーネントとと...",
+    "url": "https://qiita.com/D_suke/items/444089bf9fcb8e10cdbb",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "Vue.js",
+      "フロントエンド"
+    ],
+    "likes": 4,
+    "stocks": 2,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-497e71c5486a6280715b",
+    "title": "【GIT】\"xcode-select: Failed to locate 'git', requesting installation of command line developer tools.\"の対処法",
+    "date": "Mon Sep 19 2022 17:10:35 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに 久しぶりにMacを使って個人開発をしようとしたところ、gitコマンドを叩くとタイトルにあるようなエラーが発生したので、その原因と対処法を備忘録も兼ねて簡単にまとめておきます。 原因 このエラーが出たときに、原因として考えたことは以下の２つです xcode command line toolsがインストールできていない xcode command line toolsはインストールで...",
+    "url": "https://qiita.com/D_suke/items/497e71c5486a6280715b",
+    "source": "qiita",
+    "tags": [
+      "Git",
+      "VSCode"
+    ],
+    "likes": 28,
+    "stocks": 10,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-13113fcf11930dffe835",
+    "title": "【AWS】新卒フロントエンジニアがAWS CLFに１ヶ月で合格した方法",
+    "date": "Sun Jul 31 2022 11:02:46 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに 2022年4月、新卒で自社開発企業に入社し、フロントエンドエンジニアとして毎日Vue.jsを書いている新卒エンジニアです。 新卒フロントエンジニアながら、AWS CLF（クラウドプラクティショナー）を１ヶ月で取得することができました。 なので取得までに何をしたのかをまとめてみたいと思います。 ちなみにAWSの経験は「AWS Jumpstart for NewGrads」という新卒向...",
+    "url": "https://qiita.com/D_suke/items/13113fcf11930dffe835",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "AWS",
+      "Cloud"
+    ],
+    "likes": 2,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "zenn-c9b34697b2f077",
+    "title": "【AWS】新卒フロントエンジニアがAWS CLFに１ヶ月で合格した方法",
+    "date": "Sun Jul 31 2022 11:02:32 GMT+0900 (日本標準時)",
+    "category": "life",
+    "excerpt": "👨‍💻 【AWS】新卒フロントエンジニアがAWS CLFに１ヶ月で合格した方法...",
+    "url": "https://zenn.dev/d_suke0614/articles/c9b34697b2f077",
+    "source": "zenn",
+    "tags": [],
+    "likes": 2,
+    "emoji": "👨‍💻"
+  },
+  {
+    "slug": "qiita-8bdc4351e41cab91c837",
+    "title": "【Vue warn】: Property or method \"name\" is not defined on the instance but referenced during render の解決方法",
+    "date": "Sun Jun 26 2022 15:32:10 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに Vue.jsで開発しているときにエラーに出くわしたので備忘録としてここに残しておきます。 ちなみにめちゃくちゃ初歩的なエラーでした。。笑 エラー 意味 プロパティまたはメソッドのnameがインスタンスで定義されていないのに、レンダリング中に参照されてるよ 原因 dataプロパティでnameのデフォルトの値が設定されていなかった 対処法 dataプロパティでnameのデフォルトの値を...",
+    "url": "https://qiita.com/D_suke/items/8bdc4351e41cab91c837",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "error",
+      "Vue.js",
+      "フロントエンド"
+    ],
+    "likes": 1,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-86307ef2176bd8609278",
+    "title": "【Vue.js】createdとmountedの違いについて簡単に解説",
+    "date": "Sun Jun 12 2022 18:23:32 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "はじめに Vue.jsで開発していて画面の初期表示はmountedを使うと良いと教えてもらったがよくわからなかったので、調べた内容を備忘録としてここに残しておきます。 また、createdとmountedの違いについても少し調べたため簡単にまとめておきます。 もし間違っている箇所があれば優しく指摘していただけると幸いです。 結論 created：Vueインスタンスが生成され、データが初期化さ...",
+    "url": "https://qiita.com/D_suke/items/86307ef2176bd8609278",
+    "source": "qiita",
+    "tags": [
+      "Qiita",
+      "JavaScript",
+      "Vue.js",
+      "フロントエンド"
+    ],
+    "likes": 5,
+    "stocks": 1,
+    "comments": 0,
+    "private": false
+  },
+  {
+    "slug": "qiita-014243b1c5e7593d5769",
+    "title": "Vue.jsでnpm run serve をしたときにTypeError: Cannot read property 'version' of undefined at moduleと出た時の対処法",
+    "date": "Sun May 15 2022 16:05:39 GMT+0900 (日本標準時)",
+    "category": "tech",
+    "excerpt": "Vue-CLIで環境構築した時に出会ったエラーの解決策を備忘録として残しておきます。 記事内に誤りなどあれば、優しくご指摘いただけると幸いです。 はじめに 今回使用したバージョンは以下になります。 Vue-CLIの公式ホームページはこちらから。 https://cli.vuejs.org/ エラー内容 バージョンが読み取れない、、、 うーん、、よくわからない。 対処法 調べていくと、esli...",
+    "url": "https://qiita.com/D_suke/items/014243b1c5e7593d5769",
+    "source": "qiita",
+    "tags": [
+      "JavaScript",
+      "SPA",
+      "Vue.js",
+      "ESLint",
+      "vue-cli"
+    ],
+    "likes": 2,
+    "stocks": 0,
+    "comments": 0,
+    "private": false
   }
 ]
