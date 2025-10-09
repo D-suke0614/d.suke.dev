@@ -13,6 +13,27 @@ type Work = {
 
 const works: Work[] = [
   {
+    title: '【HP】株式会社BLUE CANVAS',
+    company: '株式会社BLUE CANVAS',
+    technologies: ['Next.js', 'Netlify'],
+    imageUrl: '/works/bc.png',
+    link: 'https://bluecanvas.info/',
+  },
+  {
+    title: '【LP】爆速AI LAB',
+    company: '株式会社BLUE CANVAS',
+    technologies: ['Astro', 'Netlify', 'GTM'],
+    imageUrl: '/works/bakusokuai-lab.png',
+    link: 'https://bakusoku.ailaboratory.net/',
+  },
+  {
+    title: '【イベント】LT会主催',
+    company: 'zero-creation',
+    technologies: [],
+    imageUrl: '/works/lt.png',
+    link: 'https://youtu.be/Nzs4KuO8Dh0',
+  },
+  {
     title: '【LP】観光クロスオーバーサミット2025 in 関西・大阪万博',
     company: '観光クロスオーバー協会',
     technologies: ['Astro'],
@@ -34,7 +55,7 @@ const works: Work[] = [
     imageUrl: '/works/raysee.png',
     link: 'https://raysee.jp/column',
   },
-];
+] as const;
 
 const ImageContainer = ({ work }: { work: Work }) => {
   return (
@@ -49,14 +70,18 @@ const ImageContainer = ({ work }: { work: Work }) => {
       <div className={styles.details}>
         <h2 className={styles.workTitle}>{work.title}</h2>
         <p className={styles.workCompany}>{work.company}</p>
-        <h3 className={styles.technologiesTitle}>Technologies:</h3>
-        <div className={styles.technologies}>
-          {work.technologies.map((tech, index) => (
-            <span key={index} className={styles.technology}>
-              {tech}
-            </span>
-          ))}
-        </div>
+        {work.technologies.length > 0 && (
+          <>
+            <h3 className={styles.technologiesTitle}>Technologies:</h3>
+            <div className={styles.technologies}>
+              {work.technologies.map((tech, index) => (
+                <span key={index} className={styles.technology}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
         {work.link ? <span className={styles.viewLink}>View Project</span> : <></>}
         {work.link && work.isPreview ? (
           <span className={styles.annotation}>※PJ都合でプレビュー環境に遷移します</span>
