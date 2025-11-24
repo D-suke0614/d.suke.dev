@@ -6,8 +6,8 @@
     "dev": "npm run generate-blog-data:dev && next dev",
     "build": "npm run generate-blog-data:prod && next build",
     "start": "next start",
-    "generate-blog-data:dev": "node scripts/generate-blog-data.js --dev",
-    "generate-blog-data:prod": "node scripts/generate-blog-data.js --prod",
+    "generate-blog-data:dev": "npx tsx scripts/generate-blog-data.ts --dev",
+    "generate-blog-data:prod": "npx tsx scripts/generate-blog-data.ts --prod",
     "lint": "run-p -l -c --aggregate-output lint:*",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
@@ -44,6 +44,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.1.0",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   },
   "lint-staged": {

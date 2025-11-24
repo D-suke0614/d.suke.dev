@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# blog content
+/public/blog-content/
+/public/blog-data.json
+/public/blog-posts.json

@@ -7,7 +7,12 @@
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
       "Bash(npm run lint)",
-      "Bash(npm run fix:*)"
+      "Bash(npm run fix:*)",
+      "Bash(git checkout:*)",
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }
