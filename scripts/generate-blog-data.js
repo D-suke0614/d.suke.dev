@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
+// 環境変数の読み込み（.env.localがある場合）
+require('dotenv').config({ path: path.join(process.cwd(), '.env.local') });
+
 // 引数の解析
 const isDev = process.argv.includes('--dev');
 const isProd = process.argv.includes('--prod');
@@ -56,17 +59,18 @@ function getInternalPosts() {
   }
 }
 
-// 外部記事の取得（Phase 2で実装予定）
-function getExternalPosts() {
-  if (isDev) {
-    // 開発環境では外部記事を取得しない（高速起動のため）
-    console.log('⚡ Skipping external posts in development mode');
+// 外部記事の取得（Phase 2: プロバイダーシステムを使用）
+async function getExternalPosts() {
+  const ProviderManager = require('./providers');
+  const providerManager = new ProviderManager(isDev);
+
+  try {
+    const externalPosts = await providerManager.fetchAllArticles();
+    return externalPosts;
+  } catch (error) {
+    console.error('❌ Failed to fetch external posts:', error.message);
     return [];
   }
-
-  // Phase 2で実装予定
-  console.log('🔄 External posts integration (Phase 2) - coming soon');
-  return [];
 }
 
 // メイン処理
@@ -76,7 +80,7 @@ async function generateBlogData() {
     const internalPosts = getInternalPosts();
 
     // 外部記事取得（Phase 2）
-    const externalPosts = getExternalPosts();
+    const externalPosts = await getExternalPosts();
 
     // 統合とソート
     const allPosts = [...internalPosts, ...externalPosts];

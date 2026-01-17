@@ -1,8 +1,10 @@
 'use client';
 
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { SiZenn } from 'react-icons/si';
 import styles from './page.module.css';
 
 // Import the blog utility functions with the correct path
@@ -41,9 +43,17 @@ export default function BlogPage() {
 
   // Filter posts based on active filter
   const filteredPosts = useMemo(() => {
-    return activeFilter === 'all'
-      ? posts
-      : posts.filter((post) => post.category === activeFilter);
+    if (activeFilter === 'all') {
+      return posts;
+    }
+
+    // カテゴリーフィルター (tech, life)
+    if (activeFilter === 'tech' || activeFilter === 'life') {
+      return posts.filter((post) => post.category === activeFilter);
+    }
+
+    // ソースフィルター (internal, zenn, note, qiita)
+    return posts.filter((post) => post.source === activeFilter);
   }, [posts, activeFilter]);
 
   // Calculate total pages
@@ -79,6 +89,25 @@ export default function BlogPage() {
     });
   }, []);
 
+  // 記事ソース別アイコンとラベルを取得
+  const getSourceIcon = useCallback((source: string) => {
+    switch (source) {
+      case 'zenn':
+        return { icon: <SiZenn />, label: 'Zenn', color: '#3EA8FF' };
+      case 'note':
+        return {
+          icon: <Image src="/note-icon.png" width={12} height={12} alt="note-icon" />,
+          label: 'Note',
+          color: '#41C9B4',
+        };
+      case 'qiita':
+        return { icon: '📚', label: 'Qiita', color: '#55C500' };
+      case 'internal':
+      default:
+        return { icon: '✏️', label: 'Blog', color: 'var(--color-accent)' };
+    }
+  }, []);
+
   if (isLoading) {
     return (
       <div className={styles.container}>
@@ -94,26 +123,61 @@ export default function BlogPage() {
     <div className={styles.container}>
       <h1 className={styles.title}>Blog</h1>
 
-      {/* Tag filters */}
-      <div className={styles.filters}>
-        <button
-          onClick={() => setActiveFilter('all')}
-          className={`${styles.filterButton} ${activeFilter === 'all' ? styles.activeFilter : ''}`}
-        >
-          All
-        </button>
-        <button
-          onClick={() => setActiveFilter('tech')}
-          className={`${styles.filterButton} ${activeFilter === 'tech' ? styles.activeFilter : ''}`}
-        >
-          Tech
-        </button>
-        <button
-          onClick={() => setActiveFilter('life')}
-          className={`${styles.filterButton} ${activeFilter === 'life' ? styles.activeFilter : ''}`}
-        >
-          Life
-        </button>
+      {/* Category and Source filters */}
+      <div className={styles.filtersContainer}>
+        <div className={styles.filterSection}>
+          <h3 className={styles.filterTitle}>Category</h3>
+          <div className={styles.filters}>
+            <button
+              onClick={() => setActiveFilter('all')}
+              className={`${styles.filterButton} ${activeFilter === 'all' ? styles.activeFilter : ''}`}
+            >
+              All
+            </button>
+            <button
+              onClick={() => setActiveFilter('tech')}
+              className={`${styles.filterButton} ${activeFilter === 'tech' ? styles.activeFilter : ''}`}
+            >
+              Tech
+            </button>
+            <button
+              onClick={() => setActiveFilter('life')}
+              className={`${styles.filterButton} ${activeFilter === 'life' ? styles.activeFilter : ''}`}
+            >
+              Life
+            </button>
+          </div>
+        </div>
+
+        <div className={styles.filterSection}>
+          <h3 className={styles.filterTitle}>Source</h3>
+          <div className={styles.filters}>
+            <button
+              onClick={() => setActiveFilter('internal')}
+              className={`${styles.filterButton} ${activeFilter === 'internal' ? styles.activeFilter : ''}`}
+            >
+              ✏️ Blog
+            </button>
+            <button
+              onClick={() => setActiveFilter('zenn')}
+              className={`${styles.filterButton} ${styles.filterZenn} ${activeFilter === 'zenn' ? styles.activeFilter : ''}`}
+            >
+              <SiZenn /> Zenn
+            </button>
+            <button
+              onClick={() => setActiveFilter('note')}
+              className={`${styles.filterButton} ${styles.filterNote} ${activeFilter === 'note' ? styles.activeFilter : ''}`}
+            >
+              <Image src="/note-logo.png" width={42} height={16} alt="note-icon" />
+            </button>
+            <button
+              onClick={() => setActiveFilter('qiita')}
+              className={`${styles.filterButton} ${activeFilter === 'qiita' ? styles.activeFilter : ''}`}
+            >
+              📚 Qiita
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className={styles.content}>
@@ -134,19 +198,52 @@ export default function BlogPage() {
                 >
                   <div className={styles.postMeta}>
                     <div className={styles.postDate}>{formatDate(post.date)}</div>
-                    <span className={styles.postCategory}>
-                      {post.category === 'tech' ? 'Tech' : 'Life'}
-                    </span>
+                    <div className={styles.postBadges}>
+                      <span className={styles.postCategory}>
+                        {post.category === 'tech' ? 'Tech' : 'Life'}
+                      </span>
+                      <span
+                        className={styles.postSource}
+                        style={{ color: getSourceIcon(post.source).color }}
+                        title={`Published on ${getSourceIcon(post.source).label}`}
+                      >
+                        {getSourceIcon(post.source).icon}{' '}
+                        {getSourceIcon(post.source).label}
+                      </span>
+                    </div>
                   </div>
                   <h2 className={styles.postTitle}>
-                    <Link href={`/blog/${post.slug}`} className={styles.postTitleLink}>
-                      {post.title}
-                    </Link>
+                    {post.source === 'internal' ? (
+                      <Link href={`/blog/${post.slug}`} className={styles.postTitleLink}>
+                        {post.title}
+                      </Link>
+                    ) : (
+                      <a
+                        href={post.url}
+                        className={styles.postTitleLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {post.title} <ExternalLink className={styles.externalIcon} />
+                      </a>
+                    )}
                   </h2>
                   <p className={styles.postExcerpt}>{post.excerpt}</p>
-                  <Link href={`/blog/${post.slug}`} className={styles.readMoreLink}>
-                    Read more
-                  </Link>
+                  {post.source === 'internal' ? (
+                    <Link href={`/blog/${post.slug}`} className={styles.readMoreLink}>
+                      Read more
+                    </Link>
+                  ) : (
+                    <a
+                      href={post.url}
+                      className={styles.readMoreLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Read on {getSourceIcon(post.source).label}{' '}
+                      <ExternalLink className={styles.externalIcon} />
+                    </a>
+                  )}
                 </article>
               ))}
             </div>
